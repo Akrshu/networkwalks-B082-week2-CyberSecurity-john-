@@ -35,7 +35,8 @@ The modules focused on moving beyond theory into real, practical exposure to:
 ## 🗂️ Table of Contents
 
 - [🧪 Module 1 — Cybersecurity Practical Tasks](#-module-1--cybersecurity-practical-tasks)
-- [🤖 Module 2 — Setting Up HexStrike MCP with Claude](#-module-2--setting-up-hexstrike-mcp-with-claude)
+- [🔓 Module 2 — Password Cracking with NetworkWalks Tools](#-module-2--password-cracking-with-networkwalks-tools)
+- [🤖 Module 3 — Setting Up HexStrike MCP with Claude](#-module-3--setting-up-hexstrike-mcp-with-claude)
 - [🧠 Overall Learning](#-overall-learning)
 - [🛠️ Technologies & Tools](#️-technologies--tools)
 - [📈 Learning Journey](#-learning-journey)
@@ -46,6 +47,11 @@ The modules focused on moving beyond theory into real, practical exposure to:
 ---
 
 ## 🧪 Module 1 — Cybersecurity Practical Tasks
+<img width="1600" height="822" alt="pdf 2 john pass crack" src="https://github.com/user-attachments/assets/2d5a5a4c-b656-4b23-ac3b-77613f15d0e5" />
+<img width="1600" height="822" alt="flag found" src="https://github.com/user-attachments/assets/766e0bca-566b-49e9-b3ef-63953a02dfde" />
+<img width="1600" height="822" alt="flag for 2nd" src="https://github.com/user-attachments/assets/162e68fd-fa2b-4b5b-88c9-681dc9473d6a" />
+<img width="1600" height="822" alt="flag for 3" src="https://github.com/user-attachments/assets/9ac1610f-f7c9-40b1-95b8-01fdd0edc0ed" />
+<img width="1600" height="888" alt="file 1 pass " src="https://github.com/user-attachments/assets/465bdb55-402f-40a5-b045-8ac8bb225e6f" />
 
 ### 🎯 Objective
 
@@ -134,7 +140,145 @@ Password-cracking effectiveness depends on:
 
 ---
 
-## 🤖 Module 2 — Setting Up HexStrike MCP with Claude
+## 🔓 Module 2 — Password Cracking with NetworkWalks Tools
+<img width="1600" height="840" alt="hashcalculator" src="https://github.com/user-attachments/assets/e94157ee-48df-4928-b731-518c915f9b5e" />
+<img width="1600" height="840" alt="pass cracker" src="https://github.com/user-attachments/assets/35877680-6694-45c4-9fff-a817b72985b7" />
+
+### 📌 Overview
+
+In this module, I worked on password cracking using the **NetworkWalks password-cracking tools**. The practical focused on understanding how password hashes are generated/extracted and how those hashes can be tested against password wordlists to recover the original password.
+
+The complete workflow was performed in a controlled cybersecurity training environment for learning and ethical-security purposes.
+
+### 🎯 Objectives
+
+- 🔎 Understand the concept of password hashing
+- 🧮 Generate/extract password hashes using the NetworkWalks Hash Calculator
+- 🧠 Understand commonly used hash algorithms such as MD5 and SHA-1
+- 🔗 Use the generated hash as input for password cracking
+- 📚 Perform dictionary-based password cracking using the NetworkWalks Password Cracker
+- ✅ Verify the recovered password
+- 🚩 Successfully capture the provided training flag
+
+### 🧠 Concept — Password Hashing
+
+A password hash is a fixed-length representation generated from a password using a hashing algorithm.
+
+During the practical, the **NetworkWalks Hash Calculator** was used to generate hashes from text, providing outputs for algorithms including:
+
+| Algorithm | Notes |
+|---|---|
+| MD5 | ⚠️ Legacy — not secure for passwords |
+| SHA-1 | ⚠️ Legacy — not secure for passwords |
+| SHA-256 | ✅ Stronger |
+| SHA-384 | ✅ Stronger |
+| SHA-512 | ✅ Stronger |
+
+> 💡 The practical demonstrated that older algorithms such as MD5 and SHA-1 should not be considered secure choices for storing passwords.
+
+### 🛠️ Tools Used
+
+- 🧮 **NetworkWalks Hash Calculator** — used to generate password hashes and work with hash values.
+- 🔓 **NetworkWalks Password Cracker** — used to attempt recovery of the original password from its hash using a wordlist-based approach.
+
+### 🔄 Practical Workflow
+
+```text
+Input Password/Text
+        ↓
+NetworkWalks Hash Calculator
+        ↓
+Generate Hash
+        ↓
+Identify/Select Hash Type
+        ↓
+Provide Hash to Password Cracker
+        ↓
+Use Password Wordlist
+        ↓
+Cracking Process
+        ↓
+Password Recovered
+        ↓
+Verify Result
+        ↓
+Capture Training Flag
+```
+
+### 🔎 Step 1 — Generate the Hash
+
+Text was entered into the **NetworkWalks Hash Calculator**, which generated multiple hash representations of the input, including MD5 and SHA-1.
+
+This helped in understanding how the same input can produce different hash values depending on the hashing algorithm used.
+
+### 🔓 Step 2 — Password Cracking
+
+After obtaining the hash, the **NetworkWalks Password Cracker** was used. The hash was provided to the cracker along with an appropriate password wordlist.
+
+The tool tested candidate passwords against the target hash until a matching password was identified.
+
+**✅ Result:** The password was successfully cracked as:
+
+```
+password1
+```
+
+### 🚩 Step 3 — Flag Capture
+
+After successfully recovering the password, the corresponding training flag was obtained — confirming the password-cracking workflow was completed successfully.
+
+**Captured flags from this practical:**
+
+```
+🏁 nw[networkwalks_flag_260821_1]
+🏁 nw[networkwalks_persistence_jtr_270521]
+```
+
+### 📸 Practical Evidence
+
+Screenshots were captured during the practical to document:
+
+- 🧮 Hash generation using the NetworkWalks Hash Calculator
+- 🔢 Hash values generated for different algorithms
+- ⚙️ Password-cracking configuration
+- ▶️ Password-cracking process
+- ✅ Successful password recovery
+- 🚩 Successful flag capture
+
+### 🧪 Key Learning Outcomes
+
+- ✅ How password hashing works at a practical level
+- ✅ How different hashing algorithms produce different hash values
+- ✅ How hashes can be used as inputs during password-recovery attacks
+- ✅ How dictionary/wordlist-based password cracking works
+- ✅ Why weak and predictable passwords are easier to recover
+- ✅ The importance of strong password policies and secure password-storage mechanisms
+- ✅ How cybersecurity training environments use flags to verify successful exploitation or challenge completion
+
+### 🔐 Security Takeaways
+
+- 🔓 Weak passwords can be recovered relatively easily when they appear in common wordlists
+- 🛡️ Password hashes should be protected even though they are not plaintext passwords
+- ⚠️ Legacy hashing algorithms such as MD5 and SHA-1 are unsuitable for modern password storage
+- 💪 Strong, unique passwords significantly increase resistance to dictionary-based attacks
+- 🧂 Modern password storage should use dedicated password-hashing mechanisms with appropriate salting and work factors
+
+### ⚠️ Ethical Consideration
+
+All password-cracking activities in this module were performed in a controlled cybersecurity training environment provided for educational purposes. Password cracking should only be performed on systems, accounts, files, or hashes for which **explicit authorization** has been provided.
+
+### ✅ Module Status
+
+**Project Module 2 — Completed Successfully 🎯**
+
+`Hash Generation → Hash Analysis → Password Cracking → Password Recovery → Flag Capture`
+
+---
+
+## 🤖 Module 3 — Setting Up HexStrike MCP with Claude
+<img width="1600" height="840" alt="claude" src="https://github.com/user-attachments/assets/f4d61ea0-7648-4161-ac42-5315d9f82566" />
+<img width="656" height="489" alt="hexstrike2" src="https://github.com/user-attachments/assets/65e72d97-2173-44a7-998e-5996d4ad834a" />
+<img width="661" height="489" alt="hexstrike" src="https://github.com/user-attachments/assets/3ffd997f-b088-4e4c-8fd3-10f30e6dca32" />
 
 ### 🎯 Objective
 
@@ -276,7 +420,8 @@ Running on: http://127.0.0.1:8888
 <table>
 <tr>
 <th>🧪 Module 1</th>
-<th>🤖 Module 2</th>
+<th>🔓 Module 2</th>
+<th>🤖 Module 3</th>
 </tr>
 <tr>
 <td>
@@ -291,6 +436,23 @@ Password Security
 Password Cracking
       ↓
 CTF / Flag Capture
+```
+
+</td>
+<td>
+
+```
+Hash Generation
+      ↓
+Hash Algorithms
+      ↓
+Provide Hash to Cracker
+      ↓
+Wordlist Attack
+      ↓
+Password Recovered
+      ↓
+Flag Capture
 ```
 
 </td>
@@ -357,6 +519,8 @@ Password Cracking
           ↓
 Wordlists
           ↓
+Hash Generation & Analysis
+          ↓
 Capture The Flag
           ↓
 Linux Security Environment
@@ -378,7 +542,7 @@ AI-Assisted Cybersecurity 🔐🤖
 
 ## 🏁 Conclusion
 
-These practical modules were a significant part of my cybersecurity learning journey. From understanding how password hashes can be extracted and tested in controlled environments, to setting up an MCP-based security environment with **Claude Desktop** and **HexStrike AI**, the exercises provided valuable hands-on exposure to modern cybersecurity workflows.
+These practical modules were a significant part of my cybersecurity learning journey. From understanding how password hashes can be extracted and tested in controlled environments, to generating and cracking hashes with the **NetworkWalks tools**, to setting up an MCP-based security environment with **Claude Desktop** and **HexStrike AI** — the exercises provided valuable hands-on exposure to modern cybersecurity workflows.
 
 More importantly, this experience reinforced the value of **learning by doing** — understanding the underlying technology and continuously developing a practical security mindset.
 
